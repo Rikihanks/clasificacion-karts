@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Clasificación General GP</title>
+  <title>Clasificación General CK</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Russo+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  <style>
+ <style>
     :root {
       --bg-color: #0f172a;
       --card-bg: rgba(30, 41, 59, 0.6);
@@ -22,26 +22,32 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: var(--bg-color);
-      background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, var(--bg-color) 80%);
-      color: var(--text-main);
       margin: 0;
       padding: 1rem;
+      background-color: var(--bg-color);
+      /* FONDO DEL SORTEO DE KARTS */
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(239, 68, 68, 0.15) 0%, transparent 20%);
+      color: var(--text-main);
       min-height: 100vh;
     }
 
-    /* Título Brillante (Fix iPhone) */
+    /* Título Brillante (AHORA IGUAL QUE EL SORTEO) */
     h1 {
       font-family: 'Russo One', sans-serif;
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.5rem; /* Un poco más pequeño que el del sorteo para no ser tan dominante */
       text-transform: uppercase;
+      letter-spacing: 2px; /* Añadido para igualar */
       margin-bottom: 2rem;
+      
       background: linear-gradient(180deg, #ffffff 20%, #bae6fd 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.6));
+      filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.6)) 
+              drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5)); /* Añadida la sombra más profunda */
     }
 
     .container {
@@ -218,7 +224,6 @@
       .podium-card .avatar { margin: 0 1rem 0 0; width: 70px; height: 70px; }
       .podium-content { flex: 1; }
       
-      /* Ajuste de glow en móvil */
       .rank-1 { transform: scale(1.02); }
     }
   </style>
